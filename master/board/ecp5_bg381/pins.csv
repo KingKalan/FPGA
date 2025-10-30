@@ -1,0 +1,182 @@
+Signal,Description,Direction,Pin,IO_Standard,Bank,Notes
+CLK_14M318,Master clock input (14.318 MHz NTSC),INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+nRESET,Global reset (active low),INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_PHI2,CPU Phase 2 clock,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[23],CPU Address bus bit 23 (MSB),INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[22],CPU Address bus bit 22,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[21],CPU Address bus bit 21,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[20],CPU Address bus bit 20,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[19],CPU Address bus bit 19,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[18],CPU Address bus bit 18,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[17],CPU Address bus bit 17,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[16],CPU Address bus bit 16,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[15],CPU Address bus bit 15,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[14],CPU Address bus bit 14,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[13],CPU Address bus bit 13,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[12],CPU Address bus bit 12,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[11],CPU Address bus bit 11,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[10],CPU Address bus bit 10,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[9],CPU Address bus bit 9,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[8],CPU Address bus bit 8,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[7],CPU Address bus bit 7,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[6],CPU Address bus bit 6,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[5],CPU Address bus bit 5,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[4],CPU Address bus bit 4,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[3],CPU Address bus bit 3,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[2],CPU Address bus bit 2,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[1],CPU Address bus bit 1,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_A[0],CPU Address bus bit 0 (LSB),INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_D[7],CPU Data bus bit 7 (MSB),BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_D[6],CPU Data bus bit 6,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_D[5],CPU Data bus bit 5,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_D[4],CPU Data bus bit 4,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_D[3],CPU Data bus bit 3,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_D[2],CPU Data bus bit 2,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_D[1],CPU Data bus bit 1,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_D[0],CPU Data bus bit 0 (LSB),BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_RWB,"CPU Read/Write (1=read, 0=write)",INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_RDY,CPU Ready (wait state control),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_nIRQ,CPU IRQ (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CPU_nNMI,CPU NMI (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[14],VRAM Address bit 14 (MSB),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[13],VRAM Address bit 13,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[12],VRAM Address bit 12,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[11],VRAM Address bit 11,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[10],VRAM Address bit 10,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[9],VRAM Address bit 9,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[8],VRAM Address bit 8,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[7],VRAM Address bit 7,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[6],VRAM Address bit 6,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[5],VRAM Address bit 5,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[4],VRAM Address bit 4,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[3],VRAM Address bit 3,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[2],VRAM Address bit 2,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[1],VRAM Address bit 1,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_A[0],VRAM Address bit 0 (LSB),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[15],VRAM Data bit 15 (MSB),BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[14],VRAM Data bit 14,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[13],VRAM Data bit 13,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[12],VRAM Data bit 12,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[11],VRAM Data bit 11,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[10],VRAM Data bit 10,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[9],VRAM Data bit 9,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[8],VRAM Data bit 8,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[7],VRAM Data bit 7,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[6],VRAM Data bit 6,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[5],VRAM Data bit 5,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[4],VRAM Data bit 4,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[3],VRAM Data bit 3,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[2],VRAM Data bit 2,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[1],VRAM Data bit 1,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_D[0],VRAM Data bit 0 (LSB),BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_nCE,VRAM Chip Enable (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_nOE,VRAM Output Enable (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_nWE,VRAM Write Enable (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_nLB,VRAM Lower Byte Enable (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VRAM_nUB,VRAM Upper Byte Enable (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[12],SRAM Address bit 12 (MSB),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[11],SRAM Address bit 11,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[10],SRAM Address bit 10,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[9],SRAM Address bit 9,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[8],SRAM Address bit 8,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[7],SRAM Address bit 7,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[6],SRAM Address bit 6,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[5],SRAM Address bit 5,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[4],SRAM Address bit 4,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[3],SRAM Address bit 3,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[2],SRAM Address bit 2,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[1],SRAM Address bit 1,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_A[0],SRAM Address bit 0 (LSB),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_D[7],SRAM Data bit 7,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_D[6],SRAM Data bit 6,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_D[5],SRAM Data bit 5,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_D[4],SRAM Data bit 4,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_D[3],SRAM Data bit 3,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_D[2],SRAM Data bit 2,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_D[1],SRAM Data bit 1,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_D[0],SRAM Data bit 0,BIDIR,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_nCE,SRAM Chip Enable (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_nOE,SRAM Output Enable (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+SRAM_nWE,SRAM Write Enable (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_R[7],Video Red channel bit 7 (MSB),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_R[6],Video Red channel bit 6,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_R[5],Video Red channel bit 5,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_R[4],Video Red channel bit 4,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_R[3],Video Red channel bit 3,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_R[2],Video Red channel bit 2,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_R[1],Video Red channel bit 1,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_R[0],Video Red channel bit 0 (LSB),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_G[7],Video Green channel bit 7 (MSB),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_G[6],Video Green channel bit 6,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_G[5],Video Green channel bit 5,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_G[4],Video Green channel bit 4,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_G[3],Video Green channel bit 3,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_G[2],Video Green channel bit 2,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_G[1],Video Green channel bit 1,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_G[0],Video Green channel bit 0 (LSB),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_B[7],Video Blue channel bit 7 (MSB),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_B[6],Video Blue channel bit 6,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_B[5],Video Blue channel bit 5,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_B[4],Video Blue channel bit 4,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_B[3],Video Blue channel bit 3,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_B[2],Video Blue channel bit 2,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_B[1],Video Blue channel bit 1,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_B[0],Video Blue channel bit 0 (LSB),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_HSYNC,Video Horizontal Sync,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_VSYNC,Video Vertical Sync,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_BLANK,Video Blanking signal,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+VID_CLK,Video Pixel Clock (5.37 MHz),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+AUDIO_L,Audio Left Channel PWM/DAC,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+AUDIO_R,Audio Right Channel PWM/DAC,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[23],Cartridge Address bit 23,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[22],Cartridge Address bit 22,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[21],Cartridge Address bit 21,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[20],Cartridge Address bit 20,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[19],Cartridge Address bit 19,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[18],Cartridge Address bit 18,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[17],Cartridge Address bit 17,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[16],Cartridge Address bit 16,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[15],Cartridge Address bit 15,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[14],Cartridge Address bit 14,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[13],Cartridge Address bit 13,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[12],Cartridge Address bit 12,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[11],Cartridge Address bit 11,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[10],Cartridge Address bit 10,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[9],Cartridge Address bit 9,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[8],Cartridge Address bit 8,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[7],Cartridge Address bit 7,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[6],Cartridge Address bit 6,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[5],Cartridge Address bit 5,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[4],Cartridge Address bit 4,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[3],Cartridge Address bit 3,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[2],Cartridge Address bit 2,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[1],Cartridge Address bit 1,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_A[0],Cartridge Address bit 0,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_D[7],Cartridge Data bit 7,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_D[6],Cartridge Data bit 6,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_D[5],Cartridge Data bit 5,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_D[4],Cartridge Data bit 4,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_D[3],Cartridge Data bit 3,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_D[2],Cartridge Data bit 2,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_D[1],Cartridge Data bit 1,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_D[0],Cartridge Data bit 0,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_nCE,Cartridge Chip Enable (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+CART_nOE,Cartridge Output Enable (active low),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+ROM_PWR_EN,ROM Power Enable (TPM-gated),OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+PAD1_LATCH,Controller 1 Latch,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+PAD1_CLK,Controller 1 Clock,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+PAD1_DATA,Controller 1 Serial Data,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+PAD2_LATCH,Controller 2 Latch,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+PAD2_CLK,Controller 2 Clock,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+PAD2_DATA,Controller 2 Serial Data,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+FLASH_CS,SPI Flash Chip Select,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+FLASH_SCK,SPI Flash Clock,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+FLASH_MOSI,SPI Flash Master Out Slave In,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+FLASH_MISO,SPI Flash Master In Slave Out,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+LED_POWER,Power LED,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+LED_STATUS,Status LED,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+LED_ERROR,Error LED,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+JTAG_TMS,JTAG Test Mode Select,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+JTAG_TCK,JTAG Test Clock,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+JTAG_TDI,JTAG Test Data In,INPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
+JTAG_TDO,JTAG Test Data Out,OUTPUT,Pxx,LVCMOS33,TBD,Assign based on PCB routing
