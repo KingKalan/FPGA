@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Disc Sheet Autofill Script Generator</title>
+<style>
+  body { background: #111; color: #eee; font-family: Arial, sans-serif; padding: 20px; }
+  h1, h2, h3 { margin-top: 0.4em; }
+  table { border-collapse: collapse; width: 100%; max-width: 1400px; margin-bottom: 20px; font-size: 12px; }
+  th, td { border: 1px solid #444; padding: 3px; text-align: center; }
+  th { background: #222; }
+  input { width: 75px; background: #222; color: #eee; border: 1px solid #555; padding: 2px 3px; font-size: 11px; }
+  textarea { width: 100%; height: 260px; background: #000; color: #0f0; border: 1px solid #555;
+             font-family: "Consolas", monospace; font-size: 11px; padding: 6px; }
+  button { background: #0a84ff; color: #fff; border: none; padding: 8px 14px; margin: 8px 0; cursor: pointer; }
+  button:hover { background: #0c9bff; }
+  .field-label { text-align: left; min-width: 220px; font-weight: bold; }
+  .section-title { margin-top: 1.5em; }
+</style>
+</head>
+<body>
+
+<h1>Disc Process – Autofill Script Generator</h1>
+
+<p>Fill in the values for each <b>Position (30–36)</b>.  
+Fields left blank will be ignored.</p>
+
+<h2 class="section-title">Fields that are the same for ALL Positions</h2>
+<table id="global-table"></table>
+
+<h2 class="section-title">Fields that change by Position</h2>
+<table id="data-table"></table>
+
+<button onclick="generateScript()">Generate Script</button>
+
+<h3>Copy this into Edge DevTools Console on the Disc Process page</h3>
+<textarea id="output" readonly></textarea>
+
+<script>
+  const POSITIONS = [30, 31, 32, 33, 34, 35, 36];
+
+  const GLOBAL_FIELDS = [
+    { name: "FiberizerGlassStreamPullRateTargetLbPerHr", label: "Pull Rate Target (lb/hr)" },
+    { name: "ExternalFlowTargetScfh",                    label: "External Air Target (SCFH)" },
+    { name: "ExternalGasTarget",                         label: "External Gas Target (SCFH)" },
+    { name: "InternalSelasFlowScfmTarget",               label: "Internal Selas Target (SCFM)" },
+    { name: "PlantAirPsi",                               label: "Plant Air (psi)" }
+  ];
+
+  const FIELDS = [
+    { name: "ForehearthBushingTemperatureTargetF", label: "Orifice Temp SP" },
+    { name: "ForehearthBushingTemperatureF",       label: "Orifice Temp PV" },
+    { name: "OrificPercentOutput",                 label: "Orifice % Output" },
+
+    { name: "FiberizerGlassStreamLadleCheckLbPerHr",      label: "Pull Rate Calibration" },
+    { name: "FiberizerGlassStreamPullRateActualLbPerHr",  label: "Pull Rate Actual" },
+
+    { name: "FiberizerGlassStreamOpticalTemperatureActualF", label: "Stream Temp" },
+    { name: "FiberDiameter1",                                label: "Fiber Diameter (HT)" },
+    { name: "TcwValveOpen",                                  label: "TCW Valve (Y/N)" },
+
+    { name: "ExternalGasActual",      label: "External Gas Actual" },
+    { name: "ExternalFlowActualScfh", label: "External Air Actual" },
+
+    { name: "InternalSelasFlowScfm", label: "Internal Selas Actual" },
+
+    { name: "EmulsionFlowRateGpm", label: "Emulsion Flow Rate" },
+    { name: "EmulsionTipClear",    label: "Spray Tip Clear" },
+    { name: "FiberFloat",          label: "Fiber Float" },
+
+    { name: "AirRingId",                label: "Air Ring ID #" },
+    { name: "AirRingHours",             label: "Air Ring Hours" },
+    { name: "AirRingPressureTargetPsi", label: "Air Ring Pressure Target" },
+    { name: "AirRingPressurePsi",       label: "Air Ring Pressure Actual" },
+
+    { name: "VibrationHz", label: "Vibration (Hz)" },
+    { name: "DiscSpeedRpm", label: "Disc Speed (RPM)" },
+    { name: "DiscAgeHours", label: "Disc Age (hrs)" },
+    { name: "CheckPullSap", label: "Check Pull SAP" }
+  ];
+
+  function buildGlobalTable() {
+    const table = document.getElementById("global-table");
+    const head = document.createElement("thead");
+    const hr = document.createElement("tr");
+
+    let th1 = document.createElement("th");
+    th1.textContent = "Field (All Positions)";
+    th1.className = "field-label";
+    hr.appendChild(th1);
+
+    let th2 = document.createElement("th");
+    th2.textContent = "Value";
+    hr.appendChild(th2);
+
+    head.appendChild(hr);
+    table.appendChild(head);
+
+    const body = document.createElement("tbody");
+
+    GLOBAL_FIELDS.forEach(f => {
+      const tr = document.createElement("tr");
+
+      const td1 = document.createElement("td");
+      td1.textContent = f.label;
+      td1.className = "field-label";
+      tr.appendChild(td1);
+
+      const td2 = document.createElement("td");
+      const input = document.createElement("input");
+      input.id = "GLOBAL_" + f.name;
+      td2.appendChild(input);
+      tr.appendChild(td2);
+
+      body.appendChild(tr);
+    });
+
+    table.appendChild(body);
+  }
+
+  function buildPositionTable() {
+    const table = document.getElementById("data-table");
+
+    const head = document.createElement("thead");
+    const hr = document.createElement("tr");
+
+    let th = document.createElement("th");
+    th.textContent = "Field (Per Position)";
+    th.className = "field-label";
+    hr.appendChild(th);
+
+    POSITIONS.forEach(pos => {
+      let ph = document.createElement("th");
+      ph.textContent = "Pos " + pos;
+      hr.appendChild(ph);
+    });
+
+    head.appendChild(hr);
+    table.appendChild(head);
+
+    const body = document.createElement("tbody");
+
+    FIELDS.forEach(f => {
+      const tr = document.createElement("tr");
+
+      const td1 = document.createElement("td");
+      td1.textContent = f.label;
+      td1.className = "field-label";
+      tr.appendChild(td1);
+
+      POSITIONS.forEach(pos => {
+        const td = document.createElement("td");
+        const input = document.createElement("input");
+        input.id = f.name + "_" + pos;
+        td.appendChild(input);
+        tr.appendChild(td);
+      });
+
+      body.appendChild(tr);
+    });
+
+    table.appendChild(body);
+  }
+
+  buildGlobalTable();
+  buildPositionTable();
+
+  function generateScript() {
+    const global = {};
+    GLOBAL_FIELDS.forEach(f => {
+      const value = document.getElementById("GLOBAL_" + f.name).value.trim();
+      if (value) global[f.name] = value;
+    });
+
+    const perPos = {};
+    POSITIONS.forEach(pos => {
+      const obj = {};
+      FIELDS.forEach(f => {
+        const v = document.getElementById(f.name + "_" + pos).value.trim();
+        if (v) obj[f.name] = v;
+      });
+      if (Object.keys(obj).length) perPos[pos] = obj;
+    });
+
+    const out = `(function(){
+  const globalData = ${JSON.stringify(global, null, 2)};
+  const dataByPosition = ${JSON.stringify(perPos, null, 2)};
+
+  const sel = document.getElementById("PositionId");
+  const pos = parseInt(sel.options[sel.selectedIndex].text.trim(), 10);
+
+  function setField(name, val){
+    if(!val) return;
+    let el = document.querySelector('[data-field-name="'+name+'"] input');
+    if(!el) el = document.getElementById(name);
+    if(!el) el = document.querySelector('[name="'+name+'"]');
+    if(!el) return;
+    el.value = val;
+    el.dispatchEvent(new Event("input",{bubbles:true}));
+    el.dispatchEvent(new Event("change",{bubbles:true}));
+  }
+
+  Object.keys(globalData).forEach(k=>setField(k,globalData[k]));
+  if(dataByPosition[pos])
+    Object.keys(dataByPosition[pos]).forEach(k=>setField(k,dataByPosition[pos][k]));
+
+  console.log("Autofill complete for Position", pos);
+})();`;
+
+    document.getElementById("output").value = out;
+  }
+</script>
+
+</body>
+</html>
